@@ -27,17 +27,20 @@
 
 @implementation NSDictionary (StringForKey)
 
-- (NSString *) stringForKey:(NSString *)key {
-    return [self stringForKey:key fallBack:nil];
+- (NSString *) stringForKey:(NSString *)key
+{
+    return [self stringForKey:key fallback:nil];
 }
 
-- (NSString *) stringForKey:(NSString *)key fallBack:(NSString *)fallBack{
+- (NSString *) stringForKey:(NSString *)key fallback:(NSString *)fallback
+{
     
     id result = [self objectForKey:key];
     
     if(result == nil)
-        return fallBack;
+        return fallback; // fallback (could be also be nil!)
     
+    // return string or description
     return (![result isKindOfClass:[NSString class]]) ? [result description] : result;
 }
 

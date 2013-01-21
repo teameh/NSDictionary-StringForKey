@@ -27,7 +27,25 @@
 
 @interface NSDictionary (StringForKey)
 
+/**
+ Returns the NSString associated with a given key.
+ If the object associated with a given key is not a NSString the description will be returned.
+ If the object is nil, nil will be returned.
+ 
+ @param key The key for which to return the corresponding value.
+ */
+
 - (NSString *) stringForKey:(NSString *)key;
-- (NSString *) stringForKey:(NSString *)key fallBack:(NSString *)fallBack;
+
+/**
+ Returns the NSString associated with a given key.
+ If the object associated with a given key is not a NSString the description will be returned.
+ If the object is nil, the fallback string is returned (could be nil).
+ 
+ @param key The key for which to return the corresponding value.
+ @param fallback The fallback if the object associated with a given key is nil..
+ */
+
+- (NSString *) stringForKey:(NSString *)key fallback:(NSString *)fallback;
 
 @end
