@@ -1,6 +1,6 @@
 #NSDictionary (StringForKey)
 
-####Catagory for NSDictionary to make sure your dictionary returns a string
+####Category for NSDictionary to make sure your dictionary returns a string
 
 ###stringForKey:
 
@@ -23,4 +23,4 @@ If the object is nil, the fallback string is returned (could be nil).
 
 **key** The key for which to return the corresponding value.
 
-**fallback** The fallback if the object associated with a given key is nil..
+**fallback** The fallback if the object associated with a given key is nil.
